@@ -1,0 +1,92 @@
+{smcl}
+{* 12Jan2022}{...}
+{hline}
+help for {hi:ckbcvdrisk}
+{hline}
+
+{title:CKB-CVD models}
+
+{p 4 12 2}
+{cmd:ckbcvdrisk}
+[
+{cmd:, } {opt options}
+]
+
+{title:Description}
+
+{p 4 4}
+{cmd:ckbcvdrisk} is a program that calculates 10-year risks of cardiovascular disease (CVD) and its three main subcategories (ischemic heart disease[IHD], ischemic stroke[IS], and hemorrhagic stroke[HS]) using the "CKB-CVD models".{break}
+The predictors included in the CKB-CVD models are: sex, age, systolic blood pressure (SBP), diastolic blood pressure (DBP), use of blood pressure-lowering treatment, current daily smoker, history of diabetes, and waist circumference.{break} 
+This program also recalibrates the predicted risks using the user-defined recalibration parameters.
+
+{space 4}{title:Definition of required variables}
+
+{p 4 4}
+{cmd:ckbcvdrisk} assumes that relevant Stata dataset {ul:is loaded in memory} and that required predictors {ul:have been named and coded as follows}:{break}
+{it:sex}{space 0} - Sex (0 = Women, 1 = Men){break}
+{it:age}{space 0} - Age (years){break}
+{it:sbp}{space 0} - SBP (mmHg){break}
+{it:dbp}{space 0} - DBP (mmHg){break}
+{it:hpt}{space 0} - Use of blood pressure-lowering treatment (0 = No, 1 = Yes){break}
+{it:sms}{space 0} - Current daily smoker (0 = No, 1 = Yes){break}
+{it:dia}{space 0} - History of diabetes (0 = No, 1 = Yes){break}
+{it:wai}{space 0} - Waist circumference (cm){break}
+The user should ensure that the above naming and coding scheme is adhered to before analysis.
+
+{title:Options}
+
+{p 4 8}{opt wkihd}
+recalibration slope for IHD submodel in women (default = 1)
+
+{p 4 8}{opt wbihd}
+recalibration intercept for IHD submodel in women (default = 0)
+
+{p 4 8}{opt wkis}
+recalibration slope for IS submodel in women (default = 1)
+
+{p 4 8}{opt wbis}
+recalibration intercept for IS submodel in women (default = 0)
+
+{p 4 8}{opt wkhs}
+recalibration slope for HS submodel in women (default = 1)
+
+{p 4 8}{opt wbhs}
+recalibration intercept for HS submodel in women (default = 0)
+
+{p 4 8}{opt mkihd}
+recalibration slope for IHD submodel in men (default = 1)
+
+{p 4 8}{opt mbihd}
+recalibration intercept for IHD submodel in men (default = 0)
+
+{p 4 8}{opt mkis}
+recalibration slope for IS submodel in men (default = 1)
+
+{p 4 8}{opt mbis}
+recalibration intercept for IS submodel in men (default = 0)
+
+{p 4 8}{opt mkhs}
+recalibration slope for HS submodel in men (default = 1)
+
+{p 4 8}{opt mbhs}
+recalibration intercept for HS submodel in men (default = 0)
+
+{title:Examples}
+ckbcvdrisk, wkihd(0.636) wbihd(-1.473) wkis(1.284) wbis(-0.617) wkhs(0.554) wbhs(-2.700) mkihd(1.169) mbihd(0.943) mkis(1.510) mbis(-0.090) mkhs(0.269) mbhs(-3.761)
+
+
+{title:Authors}
+
+{p 4 4}
+Songchun Yang {break}
+Department of Epidemiology & Biostatistics {break}
+School of Public Health, Peking University Health Science Center {break}
+38 Xueyuan Road, Haidian District, Beijing, China {break}
+
+{title:Remarks}
+
+{p 4 4}
+The {cmd:ckbcvdrisk} program has mainly been developed to facilitate calculation and further evaluation 
+of the "CKB-CVD models". Details of the methods and results
+are described in our paper:
+Yang S, Han Y, Yu C, et al. Development of 10-year cardiovascular risk prediction models in 0.5 million Chinese adults in the China Kadoorie Biobank. Neurology, 2022.
