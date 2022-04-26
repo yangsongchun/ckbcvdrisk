@@ -5,4 +5,4 @@ This program also recalibrates the predicted risks using the user-defined recali
 For details, please see the help file (ckbcvdrisk.hlp).
 The ckbcvdrisk.ado program has mainly been developed to facilitate calculation and further evaluation of the "CKB-CVD models". Details of the methods and results
 are described in our paper:
-Yang S, Han Y, Yu C, et al. Development of 10-year cardiovascular risk prediction models in 0.5 million Chinese adults in the China Kadoorie Biobank. Neurology, 2022.
+Yang S, Han Y, Yu C, et al. Development of a model to predict 10-year risk of ischemic and hemorrhagic stroke and ischemic heart disease using the China Kadoorie Biobank. Neurology 2022; 98(23).
