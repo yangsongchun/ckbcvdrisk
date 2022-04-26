@@ -4,11 +4,9 @@
 * Programmer: Songchun Yang (Peking University Health Science Center)
 * Created date: 2022-01-21
 * Version: 1.0
-* Citation: Yang S, Han Y, Yu C, Guo Y, Pang Y, Sun D, Pei P, Yang L, Chen Y, 
-*           Du H, Wang H, Massa S, Bennett D, Clarke R, Chen J, Chen Z, Lv J, 
-*           Li L, on behalf of the China Kadoorie Biobank Collaborative Group. 
-*           Development of 10-year cardiovascular risk prediction models in 
-*           0.5 million Chinese adults in the China Kadoorie Biobank. Neurology, 2022
+* Citation: Yang S, Han Y, Yu C, et al. Development of a model to predict 10-year 
+*           risk of ischemic and hemorrhagic stroke and ischemic heart disease 
+*           using the China Kadoorie Biobank. Neurology 2022; 98(23).
 ********************************************************************************
 
 capture program drop ckbcvdrisk
